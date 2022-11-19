@@ -87,7 +87,7 @@ for (let i = 1; i < 87; i++) {
 
     //people
 
-  app.get('/api/people',(req,res)=>{
+  app.get('/people',(req,res)=>{
 
         const sorted = array_people.slice(); 
 
@@ -124,7 +124,7 @@ for (let i = 1; i < 87; i++) {
 
     });
 
-    app.get('/api/people/:id',(req,res)=>{
+    app.get('/people/:id',(req,res)=>{
        const person=array_people[parseInt(req.params.id)];
        if(!person) return res.status(404).send('Not found');
        res.send(person);
@@ -135,11 +135,11 @@ for (let i = 1; i < 87; i++) {
 
     //planets
 
-  app.get('/api/planets',(req,res)=>{
+  app.get('/planets',(req,res)=>{
        res.send(array_planets);
     });
 
-  app.get('/api/planets/:id',(req,res)=>{
+  app.get('/planets/:id',(req,res)=>{
        const planet=array_planets[parseInt(req.params.id)];
        if(!planet) return res.status(404).send('Not found');
        res.send(planet);
