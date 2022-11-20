@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 
-const somefunction = async () => {
+const function1 = async () => {
 
   const array_people = [];
   const array_planets = [];
@@ -155,7 +155,7 @@ for (let i = 1; i < 87; i++) {
 };
 
 
-somefunction();
+function1();
 
 
 
